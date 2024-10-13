@@ -1,0 +1,72 @@
+Mbcx_data:
+  - id: 4.0.2
+
+FBcx_data: [
+        {'task_name': 'Test_44', 'page': 1, 'size': 10},
+        {'task_name': 'Test_111', 'page': 1, 'size': 10},
+        {'task_name': 'Test_55', 'page': 1, 'size': 10}
+    ]
+
+addMBerr_data:
+  - package_type: officialza
+    package_url: '111'
+  - package_type: official
+    package_url: '222'
+
+person:
+  name: '上海-${random_name()}-测试'
+  age: '${age()}'
+  sex: '${sex()}'
+
+dxbj:
+  id: 136
+  channel_id: OceanEngine
+  model_name: 自动化pytest
+  model_desc: 备注测试
+  content:
+    channel_id: OceanEngine
+    district: NONE
+    region_version: 1.0.0
+    city: [ ]
+    location_type: ALL
+    district_select: ''
+    gender: NONE
+    age: [ ]
+    retargeting_tags_include: [ ]
+    retargeting_tags_exclude: [ ]
+    action_categories_select: ''
+    interest_categories_select: ''
+    crowd: '1'
+    interest_action_mode: UNLIMITED
+    action_scene: [ ]
+    action_days: 30
+    action_categories: [ ]
+    action_words: [ ]
+    interest_categories: [ ]
+    interest_words: [ ]
+    aweme_fan_behaviors: [ ]
+    aweme_fan_time_scope: ''
+    aweme_fan_categories: [ ]
+    aweme_fan_accounts: [ ]
+    superior_popularity_type: NONE
+    device_type:
+      - MOBILE
+    ac:
+      - 2G
+      - WIFI
+    hide_if_exists: UNLIMITED
+    hide_if_converted: APP
+    converted_time_duration: TODAY
+    android_osv: '0.0'
+    ios_osv: '0.0'
+    carrier: [ ]
+    device_brand: [ ]
+    auto_extend_enabled: 0
+    auto_extend_targets: [ ]
+    model_name: 自动化pytest
+    model_desc: 备注测试
+    id: 136
+
+dxcx:
+  channel_id: OceanEngine
+  model_name: '自动化pytest'

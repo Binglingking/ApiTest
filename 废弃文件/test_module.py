@@ -1,7 +1,7 @@
 import pytest
 import requests
 import json
-from config.header import Test_headers
+from 废弃文件.header import Test_headers
 
 
 
@@ -13,9 +13,12 @@ h.headers.update(
 )
 
 # setup_module/teardown_module:用于整个测试文件数据的前置准备和清理
-@pytest.fixture(autouse=True)
-def func():
-    print('我是前置步骤')
+
+def setup_module():
+    print("准备测试数据")
+
+def teardown_module():
+    print("清理测试数据")
 
 def test_Mbcx():
 

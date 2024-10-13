@@ -4,8 +4,8 @@ class TestHeaders:
     def __init__(self):
         self.test_url = 'https://test-advertising.yostar.net'
         self.uat_url = 'https://staging-advertising.yostar.net'
-        self.access_token = "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI4NTQ1OTg3LCJpYXQiOjE3MjgyODY3ODd9.xfnsVXYQYB94-vdJNj9M7d-5GT6A9N--vshCpma0ohY"
-        self.refresh_token = "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI4ODkxNTg3LCJpYXQiOjE3MjgyODY3ODd9.JKswgI9JEYR6b-cj0XrI4KLKLL5pvMuWQrwbtdzdA2c"
+        self.access_token = "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI4OTE3NTk2LCJpYXQiOjE3Mjg2NTgzOTZ9.9HgfJhbkgEVR-Hq8Th3DeedzaaY8DtRyQ1cMiHf9_j4"
+        self.refresh_token = "eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI5MjYzMTk2LCJpYXQiOjE3Mjg2NTgzOTZ9.vs8X0D-7NIEFvSr85nZ3JaKp38yTTT4WPkp_oU0hJlc"
         self.project_id = "cqbltdqdf2vdu69hqkbg"
 
     def generate_headers(self):

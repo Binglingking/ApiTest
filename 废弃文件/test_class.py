@@ -1,7 +1,7 @@
 import pytest
 import requests
 import json
-from config.header import Test_headers
+from 废弃文件.header import Test_headers
 
 
 

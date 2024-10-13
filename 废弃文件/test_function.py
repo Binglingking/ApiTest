@@ -1,23 +1,18 @@
 import pytest
 import requests
 import json
-from config.header import Test_headers
 
+from 废弃文件.header import TestHeaders
 
+headers = TestHeaders().generate_headers()
+session = requests.Session()
+session.headers.update(headers)
+# setup_function/teardown_function:用于每条测试数据的前置准备和清理
 
-
-headers = Test_headers
-h = requests.session()
-h.headers.update(
-    headers
-)
-
-# setup_module/teardown_module:用于整个测试文件数据的前置准备和清理
-
-def setup_module():
+def setup_function():
     print("准备测试数据")
 
-def teardown_module():
+def teardown_function():
     print("清理测试数据")
 
 def test_Mbcx():
@@ -27,7 +22,7 @@ def test_Mbcx():
       "id": "1"
     }
     # a = requests.post(url, data=json.dumps(data), headers=headers)
-    aa = h.post(url, data=json.dumps(data))
+    aa = session.post(url, data=json.dumps(data))
     print(aa.json())
     assert aa.status_code == 200
     assert aa.json()["code"] == 200
@@ -46,7 +41,7 @@ def test_FBcx():
         "size": 10
     }
     # b = requests.post(url, data=json.dumps(data1), headers=headers)
-    bb = h.request("POST", url, data=json.dumps(data1))
+    bb = session.request("POST", url, data=json.dumps(data1))
     assert bb.status_code == 200
     assert bb.json()["code"] == 200
     assert bb.json()["msg"] == "OK"

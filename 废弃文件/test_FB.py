@@ -1,12 +1,10 @@
-from idlelib.format import get_comment_header
-
 import pytest
 import requests
 import json
 
 from Tools.scripts.generate_opcode_h import header
 
-from config.header import TestHeaders
+from 废弃文件.header import TestHeaders
 
 
 
