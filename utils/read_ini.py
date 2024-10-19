@@ -7,7 +7,7 @@ def read_ini():
     config.read(path,encoding='utf-8')
     return config
 
-get_ini = read_ini()
+# get_ini = read_ini()
 # print(read_ini()['host']['test_url'])
 
 

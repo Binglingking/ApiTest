@@ -15,18 +15,18 @@ class RestClient:
         self.test_url = test_url
     def get(self,url,  **kwargs):
         # logger.info("请求方式：{}".format(method))
-        self.logger.info("请求头：{}".format(self.token_test))
-        self.logger.info("请求参数：\n{}".format(json.dumps(kwargs, indent=2)))
-        self.logger.info("请求地址：{}".format(self.test_url + url))
-        self.logger.info("返回结果：{}".format(requests.get(self.test_url + url,headers = self.token_test, **kwargs).json()))
+        self.logger.debug("请求头：{}".format(self.token_test))
+        self.logger.debug("请求参数：{}".format(json.dumps(kwargs)))
+        self.logger.debug("请求地址：{}".format(self.test_url + url))
+        self.logger.debug("返回结果：{}".format(requests.get(self.test_url + url,headers = self.token_test, **kwargs).json()))
         return requests.get(self.test_url + url,headers = self.token_test, **kwargs)
 
     def post(self,url, **kwargs):
         # logger.info("请求方式：{}".format(method))
-        self.logger.info("请求头：{}".format(self.token_test))
-        self.logger.info("请求参数：\n{}".format(json.dumps(kwargs, indent=2)))
-        self.logger.info("请求地址：{}".format(self.test_url + url))
-        self.logger.info("返回结果：{}".format(requests.post(self.test_url + url, headers=self.token_test, **kwargs).json()))
+        self.logger.debug("请求头：{}".format(self.token_test))
+        self.logger.debug("请求参数：{}".format(json.dumps(kwargs)))
+        self.logger.debug("请求地址：{}".format(self.test_url + url))
+        self.logger.debug("返回结果：{}".format(requests.post(self.test_url + url, headers=self.token_test, **kwargs).json()))
         return requests.post(self.test_url + url,headers = self.token_test, **kwargs)
 
 

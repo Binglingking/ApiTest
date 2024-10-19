@@ -20,7 +20,7 @@ person:
 
 dxbj:
   id: 136
-  channel_id: OceanEngine
+  channel_id: OceanEngine-${random_name()}-
   model_name: 自动化pytest
   model_desc: 备注测试
   content:
@@ -69,4 +69,66 @@ dxbj:
 
 dxcx:
   channel_id: OceanEngine
+  model_name: 'pytest_sql'
+dxcx1:
+  channel_id: OceanEngine
   model_name: '自动化pytest'
+
+tfcx:
+  adv_name: 悠星-BA-巨量-自-赛铂-OB-iOS-26
+  agent_name: 赛铂
+  channel_id: OceanEngine
+  pull_status_asc: true
+
+adv_status:
+  channel_id: OceanEngine
+  adv_id_list:
+    - '1772651527243847'
+  status: 1
+
+add_orientationModule:
+  id: 0
+  channel_id: OceanEngine
+  model_name: pytest_sql
+  model_desc: pytest新建
+  content:
+    channel_id: OceanEngine
+    district: NONE
+    region_version: 1.0.0
+    city: [ ]
+    location_type: ALL
+    district_select: ''
+    gender: NONE
+    age: [ ]
+    retargeting_tags_include: [ ]
+    retargeting_tags_exclude: [ ]
+    action_categories_select: ''
+    interest_categories_select: ''
+    crowd: '1'
+    interest_action_mode: UNLIMITED
+    action_scene: [ ]
+    action_days: 30
+    action_categories: [ ]
+    action_words: [ ]
+    interest_categories: [ ]
+    interest_words: [ ]
+    superior_popularity_type: NONE
+    device_type:
+      - MOBILE
+    ac:
+      - WIFI
+    hide_if_exists: UNLIMITED
+    hide_if_converted: APP
+    converted_time_duration: TODAY
+    android_osv: '0.0'
+    ios_osv: '0.0'
+    carrier: [ ]
+    device_brand: [ ]
+    auto_extend_enabled: 0
+    auto_extend_targets: [ ]
+    model_name: pytest_sql
+    model_desc: pytest新建
+
+del_orientationModule:
+  channel_id: OceanEngine
+  id: 174

@@ -19,4 +19,5 @@ class ReadData:
         config = configparser.ConfigParser()
         config.read(self.ini_path, encoding='utf-8')
         return config
-base_data  = ReadData()
+base_data = ReadData()
+print(base_data.read_yaml()['add_orientationModule'])

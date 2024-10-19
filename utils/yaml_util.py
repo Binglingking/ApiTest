@@ -20,16 +20,13 @@ def fuc_yaml(get_yaml1):
 
 def random_name():
     return fake.name()
-
-
 def age():
     return fake.random_int(min=18, max=60)
-
-
 def sex():
     return fake.random_element(elements=('男', '女'))
 
 
-if __name__ == '__main__':
-    get_yaml1 = {'name': '上海-${random_name()}-测试', 'age': '${age()}', 'sex': '${sex()}'}
+# if __name__ == '__main__':
+
+    # get_yaml1 = {'name': '上海-${random_name()}-测试', 'age': '${age()}', 'sex': '${sex()}'}
     # print(fuc_yaml(get_yaml1))
