@@ -1,12 +1,12 @@
 from core.rest_client import RestClient
 
 
-class ApiUtil(RestClient):
-
+class OriModApiUtil(RestClient):
     """
     ApiUtil 类封装了与广告投放和定向模块相关的API请求。
     继承自 RestClient，提供了常用的HTTP请求方法。
     """
+
     def __init__(self):
         """
         初始化 ApiUtil 实例，调用父类的初始化方法。
@@ -22,7 +22,7 @@ class ApiUtil(RestClient):
         """
         return self.post('/api/orientationModule/addOrEdit', **kwargs)
 
-    def get_dxcx_data(self, **kwargs):
+    def oriMod_Search(self, **kwargs):
         """
         获取定向查询数据。
 
@@ -31,16 +31,7 @@ class ApiUtil(RestClient):
         """
         return self.get('/api/orientationModule/list', **kwargs)
 
-    def get_tfcx_data(self, **kwargs):
-        """
-        获取投放查询数据。
-
-        :param kwargs: 请求参数
-        :return: 响应对象
-        """
-        return self.get('/api/channelAdv/list', **kwargs)
-
-    def post_dxbj_data(self, **kwargs):
+    def add_oriMod_Edit(self, **kwargs):
         """
         编辑定向模块。
 
@@ -49,14 +40,14 @@ class ApiUtil(RestClient):
         """
         return self.post('/api/orientationModule/addOrEdit', **kwargs)
 
-    def post_adv_status_data(self, **kwargs):
+    def copy_oriMod(self, **kwargs):
         """
-        批量操作投放状态（开启或关闭）。
+        编辑定向模块。
 
         :param kwargs: 请求参数
         :return: 响应对象
         """
-        return self.post('/api/channelAdv/batch/operate', **kwargs)
+        return self.post('/api/orientationModule/copy', **kwargs)
 
     def del_orientationModule(self, **kwargs):
         """
@@ -69,6 +60,4 @@ class ApiUtil(RestClient):
 
 
 # 创建 ApiUtil 的实例，供其他模块使用
-apiutil = ApiUtil()
-
-
+OriModApiUtil = OriModApiUtil()

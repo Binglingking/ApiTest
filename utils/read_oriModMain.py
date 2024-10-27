@@ -2,11 +2,11 @@ import configparser
 import os
 import yaml
 
-yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'data.yaml')
+yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'oriModMain.yaml')
 ini_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'settings.ini')
 
 
-class ReadData:
+class ReadOriModMain:
     def __init__(self):
         self.yaml_path = yaml_path
         self.ini_path = ini_path
@@ -22,4 +22,4 @@ class ReadData:
         return config
 
 
-base_data = ReadData()
+base_data = ReadOriModMain()

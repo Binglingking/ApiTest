@@ -6,7 +6,7 @@ from utils.read_all import base_data
 
 
 Test_headers = {
-    'Authorization': '{"Head": {"Token": "{\\"uid\\":576,\\"uuid\\":\\"4fd0c2d9490a2bcd762325abc75fff114LgnrAF6rn5\\",\\"access_token\\":\\"eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI4OTE3NTk2LCJpYXQiOjE3Mjg2NTgzOTZ9.9HgfJhbkgEVR-Hq8Th3DeedzaaY8DtRyQ1cMiHf9_j4\\",\\"refresh_token\\":\\"eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzI5MjYzMTk2LCJpYXQiOjE3Mjg2NTgzOTZ9.vs8X0D-7NIEFvSr85nZ3JaKp38yTTT4WPkp_oU0hJlc\\"}", "Version": "v2.0", "ProjectId": "cqcu1oidf2vdu69hqkf0"}}',
+    'Authorization': '{"Head": {"Token": "{\\"uid\\":576,\\"uuid\\":\\"4fd0c2d9490a2bcd762325abc75fff114LgnrAF6rn5\\",\\"access_token\\":\\"eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzMwMjA1MTk5LCJpYXQiOjE3Mjk5NDU5OTl9.biPJ3cq-h3QGJvm4LopltFQj0cDz1EEn6FsW1TugXBs\\",\\"refresh_token\\":\\"eyJhbGciOiJIUzI1NiIsImtpZCI6InYxIiwidHlwIjoiSldUIn0.eyJuYW1lIjoiemhhbmdzaHVuIiwiaXNzIjoieW9zdGFyIiwic3ViIjoiNTc2IiwiZXhwIjoxNzMwNTUwNzk5LCJpYXQiOjE3Mjk5NDU5OTl9.oe-xSBmLPppBpe2fWL9pCTpYFyus4K__xXsWpTcByc0\\\"}", "Version": "v2.0", "ProjectId": "cqcu1oidf2vdu69hqkf0"}}',
     'Content-Type': 'application/json'}
 
 headers = Test_headers

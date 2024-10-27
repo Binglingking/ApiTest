@@ -1,0 +1,116 @@
+add_oriMod:
+  id: 0
+  channel_id: OceanEngine
+  model_name: pytest_add
+  model_desc: pytest新建
+  content:
+    channel_id: OceanEngine
+    district: NONE
+    region_version: 1.0.0
+    city: [ ]
+    location_type: ALL
+    district_select: ''
+    gender: NONE
+    age: [ ]
+    retargeting_tags_include: [ ]
+    retargeting_tags_exclude: [ ]
+    action_categories_select: ''
+    interest_categories_select: ''
+    crowd: '1'
+    interest_action_mode: UNLIMITED
+    action_scene: [ ]
+    action_days: 30
+    action_categories: [ ]
+    action_words: [ ]
+    interest_categories: [ ]
+    interest_words: [ ]
+    superior_popularity_type: NONE
+    device_type:
+      - MOBILE
+    ac:
+      - WIFI
+    hide_if_exists: UNLIMITED
+    hide_if_converted: APP
+    converted_time_duration: TODAY
+    android_osv: '0.0'
+    ios_osv: '0.0'
+    carrier: [ ]
+    device_brand: [ ]
+    auto_extend_enabled: 0
+    auto_extend_targets: [ ]
+    model_name: pytest_add
+    model_desc: pytest新建
+
+add_oriMod_Search:
+  channel_id: OceanEngine
+  model_name: 'pytest_add'
+
+add_oriMod_Edit:
+    id: 179
+    channel_id: OceanEngine
+    model_name: py_Edit
+    model_desc: 新建后编辑校验
+    content:
+      channel_id: OceanEngine
+      district: NONE
+      region_version: 1.0.0
+      city: [ ]
+      location_type: ALL
+      district_select: ''
+      gender: NONE
+      age: [ ]
+      retargeting_tags_include: [ ]
+      retargeting_tags_exclude: [ ]
+      action_categories_select: ''
+      interest_categories_select: ''
+      crowd: '1'
+      interest_action_mode: UNLIMITED
+      action_scene: [ ]
+      action_days: 30
+      action_categories: [ ]
+      action_words: [ ]
+      interest_categories: [ ]
+      interest_words: [ ]
+      aweme_fan_behaviors: [ ]
+      aweme_fan_time_scope: ''
+      aweme_fan_categories: [ ]
+      aweme_fan_accounts: [ ]
+      superior_popularity_type: NONE
+      device_type:
+        - MOBILE
+      ac:
+        - WIFI
+      hide_if_exists: UNLIMITED
+      hide_if_converted: APP
+      converted_time_duration: TODAY
+      android_osv: '0.0'
+      ios_osv: '0.0'
+      carrier: [ ]
+      device_brand: [ ]
+      auto_extend_enabled: 0
+      auto_extend_targets: [ ]
+      model_name: py_Edit
+      model_desc: 新建后编辑校验
+      id: 179
+
+
+oriMod_Edit_Search:
+  channel_id: OceanEngine
+  model_name: 'py_Edit'
+copy_oriMod_Search:
+  channel_id: OceanEngine
+  model_name: 'copy_pyEdit'
+
+copy_oriMod:
+  copy_id: 204
+  model_name: copy_pyEdit
+  model_desc: 从py_Edit复制的模板
+
+
+del_oriMod:
+  channel_id: OceanEngine
+  id: 174
+
+
+
+

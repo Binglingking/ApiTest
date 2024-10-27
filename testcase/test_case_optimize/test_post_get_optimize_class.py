@@ -3,7 +3,8 @@ from pickle import FALSE
 import allure
 import pytest
 
-from api.api import dxcx_get, dxbj_post, tfcx_get, adv_status_post, add_orientationModule, del_orientationModule
+from api import api
+from api.api import Api
 from testcase.test_case_optimize.conftest import get_orientation_module_id
 from utils.read_all import base_data
 
@@ -29,7 +30,7 @@ class TestAdmax:
     @allure.title("投放账号查询-悠星-BA-巨量-自-赛铂-OB-iOS-26")
     def test_tfcx(self):
         params = base_data.read_yaml()['tfcx']
-        result = tfcx_get(params)
+        result = Api.tfcx_get(params)
 
         # 正确检查HTTP响应状态码
         if result['code'] == 200:
@@ -52,7 +53,7 @@ class TestAdmax:
     @allure.title("新建定向模版-pytest新建")
     def test_add_orientationModule(self):
         params = base_data.read_yaml()['add_orientationModule']
-        result = add_orientationModule(params)
+        result = Api.add_orientationModule(params)
 
         # 正确检查HTTP响应状态码
         if result['code'] == 200:
@@ -77,7 +78,7 @@ class TestAdmax:
     def test_dxbj(self):
         allure.dynamic.story()
         json = base_data.read_yaml()['dxbj']
-        result = dxbj_post(json)
+        result = Api.dxbj_post(json)
         print(f"{GREEN}{result}{ENDC}")
 
         # 正确检查HTTP响应状态码
@@ -99,7 +100,7 @@ class TestAdmax:
     @allure.title("定向模块查询-pytest_sql")
     def test_dxcx(self):
         params = base_data.read_yaml()['dxcx']
-        result = dxcx_get(params)
+        result = Api.dxcx_get(params)
 
         # 正确检查HTTP响应状态码
         if result['code'] == 200:
@@ -125,7 +126,7 @@ class TestAdmax:
             "id": del_id
         }
         # print(params)
-        result = del_orientationModule(params)
+        result = Api.del_orientationModule(params)
 
         # 正确检查HTTP响应状态码
         if result['code'] == 200:
@@ -145,7 +146,7 @@ class TestAdmax:
     @allure.title("定向查询1-自动化pytest")
     def test_dxcx1(self):
         params = base_data.read_yaml()['dxcx1']
-        result = dxcx_get(params)
+        result = Api.dxcx_get(params)
 
         # 正确检查HTTP响应状态码
         if result['code'] == 200:
@@ -165,7 +166,7 @@ class TestAdmax:
     @allure.title("投放账号状态开启-title")
     def test_adv_status(self):
         json = base_data.read_yaml()['adv_status']
-        result = adv_status_post(json)
+        result = Api.adv_status_post(json)
         print(f"{GREEN}{result}{ENDC}")
 
         # 正确检查HTTP响应状态码
