@@ -1,9 +1,7 @@
 import json
 import time
 
-import allure
 import requests
-from allure_commons._allure import story
 
 from utils.log_util import logger
 
@@ -13,7 +11,7 @@ time = int(time.time())
 # 测试环境的授权信息
 Authorization_test = {
     "Head": {
-        "token": "7d752b00c14e7657a17469467cfe2e86ad2b9c7a",
+        "token": "f11b556a0a15636392b54e395831bb5576874f76",
         "region": "CN",
         "version": "1.0",
         "time": time

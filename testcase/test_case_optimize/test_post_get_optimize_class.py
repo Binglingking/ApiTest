@@ -3,7 +3,6 @@ from pickle import FALSE
 import allure
 import pytest
 
-from api import api
 from api.api import Api
 from testcase.test_case_optimize.conftest import get_orientation_module_id
 from utils.read_all import base_data

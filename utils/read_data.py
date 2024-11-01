@@ -1,5 +1,7 @@
-import yaml
 import os
+
+import yaml
+
 path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'data.yaml')
 # print(path)
 def read_yaml():

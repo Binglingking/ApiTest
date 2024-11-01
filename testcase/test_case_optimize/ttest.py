@@ -14,6 +14,7 @@
 #     "sex": "男"
 # }
 import sys
+
 import allure
 import pytest
 

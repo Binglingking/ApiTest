@@ -1,5 +1,6 @@
 import configparser
 import os
+
 import yaml
 
 yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'oriModMain.yaml')

@@ -1,0 +1,150 @@
+# D:\ApiTest\data\fb_data.yaml
+add_original_package:
+  valid:
+    original_package_type: "official"
+    original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+    original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+    original_package_version: "4.0.1"
+    version_desc: ""
+  invalid:
+    - original_package_type: ""
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+    - original_package_type: "official"
+      original_package_addr: ""
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: ""
+      original_package_version: "4.0.1"
+      version_desc: ""
+    - original_package_type: "invalid_type"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+    - original_package_type: "official"
+      original_package_addr: "invalid_url"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "invalid_version"
+      version_desc: ""
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: "aaaaaaaa" # 256个字符
+
+list_original_packages:
+  valid:
+    id: "1.8.2"
+  invalid:
+    - id: ""
+    - id: "invalid_id"
+    - id: "1.8.2"
+      unauthorized: true
+
+add_task:
+  valid:
+    task_name: "Test_55"
+    original_package_type: "official"
+    original_package_id: 1
+    original_package_version: "1.8.1"
+    ad_channel: "OceanEngine"
+    package_id_suffix: ""
+    task_desc: ""
+  invalid:
+    - task_name: ""
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: "aaaaaa" # 256个字符
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: ""
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "invalid_version"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: ""
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "invalid_channel"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: "invalid_suffix"
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+      unauthorized: true
+
+update_task:
+  valid:
+    task_id_list: [1027]
+  invalid:
+    - task_id_list: []
+    - task_id_list: [0]
+    - task_id_list: [1027]
+      unauthorized: true
+    - task_id_list: [1027]
+      already_updated: true
+
+list_tasks:
+  valid:
+    task_name: "Test_11"
+    page: 1
+    size: 10
+  invalid:
+    - task_name: ""
+    - task_name: "Test_11"
+      unauthorized: true
+
+delete_task:
+  valid:
+    task_id: 1031
+  invalid:
+    - task_id: 0
+    - task_id: 1031
+      unauthorized: true

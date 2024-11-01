@@ -3,8 +3,8 @@ import json
 import pytest
 import requests
 
-from utils.read_data import  get_yaml
-from utils.read_ini import get_ini, read_ini
+from utils.read_data import get_yaml
+from utils.read_ini import read_ini
 
 # from 废弃文件.header import Test_headers
 
