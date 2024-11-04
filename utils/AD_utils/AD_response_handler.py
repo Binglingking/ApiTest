@@ -1,6 +1,5 @@
 
 import logging
-from utils.read_oriModMain import base_data
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)
@@ -15,11 +14,11 @@ def handle_response(response, expected_code=200):
     :return: None
     """
     if response['code'] == expected_code:
-        logger.info(f"Response: {response}")
+        logger.info(f"响应内容: {response}")
     elif response['code'] == 10003:
         logger.warning("登录已过期")
         assert response['code'] == 10003
         assert response['msg'] == "登录已过期"
     else:
         logger.error(f"未知错误: {response}")
-        assert False, f"Unexpected response code: {response['code']}"
+        assert False, f"异常响应: {response['code']}"

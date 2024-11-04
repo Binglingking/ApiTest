@@ -4,7 +4,7 @@ import allure
 import pytest
 
 from api.api import Api
-from testcase.test_case_optimize.conftest import get_orientation_module_id
+from testcase.test_case_optimize.AD_conftest import get_orientation_module_id
 from utils.read_all import base_data
 
 # ANSI转义序列用于控制台颜色输出

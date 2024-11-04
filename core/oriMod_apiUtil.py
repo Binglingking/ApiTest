@@ -1,4 +1,4 @@
-from core.rest_client import RestClient
+from core.AD_rest_client import RestClient
 
 
 class OriModApiUtil(RestClient):

@@ -1,150 +1,182 @@
 # D:\ApiTest\data\fb_data.yaml
+
+# 添加原始包的测试数据
 add_original_package:
+  # 有效的测试数据
   valid:
-    original_package_type: "official"
-    original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-    original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-    original_package_version: "4.0.1"
-    version_desc: ""
-  invalid:
-    - original_package_type: ""
-      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "4.0.1"
-      version_desc: ""
-    - original_package_type: "official"
-      original_package_addr: ""
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "4.0.1"
-      version_desc: ""
-    - original_package_type: "official"
-      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-      original_apk_addr: ""
-      original_package_version: "4.0.1"
-      version_desc: ""
-    - original_package_type: "invalid_type"
-      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "4.0.1"
-      version_desc: ""
-    - original_package_type: "official"
-      original_package_addr: "invalid_url"
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "4.0.1"
-      version_desc: ""
-    - original_package_type: "official"
-      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "invalid_version"
-      version_desc: ""
-    - original_package_type: "official"
-      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
-      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
-      original_package_version: "4.0.1"
-      version_desc: "aaaaaaaa" # 256个字符
+    original_package_type: "official"  # 原始包类型，例如官方包
+    original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"  # 原始包地址
+    original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"  # 原始APK地址
+    original_package_version: "4.0.1"  # 原始包版本
+    version_desc: ""  # 版本描述
 
+  # 无效的测试数据
+  invalid:
+    - original_package_type: ""  # 空的原始包类型
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+
+    - original_package_type: "official"
+      original_package_addr: ""  # 空的原始包地址
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: ""  # 空的原始APK地址
+      original_package_version: "4.0.1"
+      version_desc: ""
+
+    - original_package_type: "invalid_type"  # 无效的原始包类型
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+
+    - original_package_type: "official"
+      original_package_addr: "invalid_url"  # 无效的原始包地址
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: ""
+
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "invalid_version"  # 无效的原始包版本
+      version_desc: ""
+
+    - original_package_type: "official"
+      original_package_addr: "oss://bluearchive-pkg/pubplat/gpp/sdkpackage/test/task_game_apk/official/"
+      original_apk_addr: "pubplat/gpp/sdkpackage/test/task_game_apk/official/4.0.1/udataDemo_v1.21.0_test_202404191721(1)(1).apk"
+      original_package_version: "4.0.1"
+      version_desc: "aaaaaaaa"  # 256个字符的版本描述
+
+# 列出原始包的测试数据
 list_original_packages:
+  # 有效的测试数据
   valid:
-    id: "1.8.2"
+    id: "1.8.2"  # 原始包ID
+
+  # 无效的测试数据
   invalid:
-    - id: ""
-    - id: "invalid_id"
+    - id: ""  # 空的原始包ID
+    - id: "invalid_id"  # 无效的原始包ID
     - id: "1.8.2"
-      unauthorized: true
+      unauthorized: true  # 未授权访问
 
+# 添加任务的测试数据
 add_task:
+  # 有效的测试数据
   valid:
-    task_name: "Test_55"
-    original_package_type: "official"
-    original_package_id: 1
-    original_package_version: "1.8.1"
-    ad_channel: "OceanEngine"
-    package_id_suffix: ""
-    task_desc: ""
-  invalid:
-    - task_name: ""
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: "OceanEngine"
-      package_id_suffix: ""
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: "OceanEngine"
-      package_id_suffix: ""
-      task_desc: "aaaaaa" # 256个字符
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: ""
-      ad_channel: "OceanEngine"
-      package_id_suffix: ""
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "invalid_version"
-      ad_channel: "OceanEngine"
-      package_id_suffix: ""
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: ""
-      package_id_suffix: ""
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: "invalid_channel"
-      package_id_suffix: ""
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: "OceanEngine"
-      package_id_suffix: "invalid_suffix"
-      task_desc: ""
-    - task_name: "Test_55"
-      original_package_type: "official"
-      original_package_id: 1
-      original_package_version: "1.8.1"
-      ad_channel: "OceanEngine"
-      package_id_suffix: ""
-      task_desc: ""
-      unauthorized: true
+    task_name: "Test_55"  # 任务名称
+    original_package_type: "official"  # 原始包类型
+    original_package_id: 1  # 原始包ID
+    original_package_version: "1.8.1"  # 原始包版本
+    ad_channel: "OceanEngine"  # 广告渠道
+    package_id_suffix: ""  # 包ID后缀
+    task_desc: ""  # 任务描述
 
+  # 无效的测试数据
+  invalid:
+    - task_name: ""  # 空的任务名称
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: "aaaaaa"  # 256个字符的任务描述
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: ""  # 空的原始包版本
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "invalid_version"  # 无效的原始包版本
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: ""  # 空的广告渠道
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "invalid_channel"  # 无效的广告渠道
+      package_id_suffix: ""
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: "invalid_suffix"  # 无效的包ID后缀
+      task_desc: ""
+    - task_name: "Test_55"
+      original_package_type: "official"
+      original_package_id: 1
+      original_package_version: "1.8.1"
+      ad_channel: "OceanEngine"
+      package_id_suffix: ""
+      task_desc: ""
+      unauthorized: true  # 未授权访问
+
+# 更新任务的测试数据
 update_task:
+  # 有效的测试数据
   valid:
-    task_id_list: [1027]
-  invalid:
-    - task_id_list: []
-    - task_id_list: [0]
-    - task_id_list: [1027]
-      unauthorized: true
-    - task_id_list: [1027]
-      already_updated: true
+    task_id_list: [1027]  # 任务ID列表
 
+  # 无效的测试数据
+  invalid:
+    - task_id_list: []  # 空的任务ID列表
+    - task_id_list: [0]  # 无效的任务ID
+    - task_id_list: [1027]
+      unauthorized: true  # 未授权访问
+    - task_id_list: [1027]
+      already_updated: true  # 已经更新的任务
+
+# 列出任务的测试数据
 list_tasks:
+  # 有效的测试数据
   valid:
-    task_name: "Test_11"
-    page: 1
-    size: 10
-  invalid:
-    - task_name: ""
-    - task_name: "Test_11"
-      unauthorized: true
+    task_name: "Test_11"  # 任务名称
+    page: 1  # 页码
+    size: 10  # 每页大小
 
-delete_task:
-  valid:
-    task_id: 1031
+  # 无效的测试数据
   invalid:
-    - task_id: 0
+    - task_name: ""  # 空的任务名称
+    - task_name: "Test_11"
+      unauthorized: true  # 未授权访问
+
+# 删除任务的测试数据
+delete_task:
+  # 有效的测试数据
+  valid:
+    task_id: 1031  # 任务ID
+
+  # 无效的测试数据
+  invalid:
+    - task_id: 0  # 无效的任务ID
     - task_id: 1031
-      unauthorized: true
+      unauthorized: true  # 未授权访问

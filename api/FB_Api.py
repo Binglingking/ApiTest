@@ -1,25 +1,25 @@
-# D:\ApiTest\api\fb_api.py
+# D:\ApiTest\api\FB_Api.py
 import requests
-from core.rest_client import RestClient
+from core.FB_rest_client import RestClient
 
 class FBApi(RestClient):
     def __init__(self):
         super().__init__()
 
-    def add_original_package(self, **kwargs):
+    def add_original_package(self, url, **kwargs):
         return self.post('/admax-packerapi/packer/original/add', **kwargs)
 
-    def list_original_packages(self, **kwargs):
+    def list_original_packages(self, url,  **kwargs):
         return self.post('/admax-packerapi/packer/original/list', **kwargs)
 
-    def add_task(self, **kwargs):
+    def add_task(self, url, **kwargs):
         return self.post('/admax-packerapi/packer/task/add', **kwargs)
 
-    def update_task(self, **kwargs):
+    def update_task(self, url, **kwargs):
         return self.post('/admax-packerapi/packer/task/update', **kwargs)
 
-    def list_tasks(self, **kwargs):
+    def list_tasks(self, url, **kwargs):
         return self.post('/admax-packerapi/packer/task/list', **kwargs)
 
-    def delete_task(self, **kwargs):
+    def delete_task(self, url, **kwargs):
         return self.post('/admax-packerapi/packer/task/delete', **kwargs)

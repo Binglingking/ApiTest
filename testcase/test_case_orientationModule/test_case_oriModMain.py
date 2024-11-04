@@ -2,9 +2,9 @@ import allure
 import pytest
 import random
 from api.oriMod_api import OriModApi
-from testcase.test_case_optimize.conftest import *
-from utils.response_handler import handle_response
-from utils.read_oriModMain import base_data
+from testcase.test_case_optimize.AD_conftest import *
+from utils.AD_utils.AD_response_handler import handle_response
+from utils.AD_utils.read_oriModMain import base_data
 
 # ANSI转义序列用于控制台颜色输出
 RED = "\033[91m"

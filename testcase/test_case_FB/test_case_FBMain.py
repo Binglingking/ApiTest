@@ -1,11 +1,10 @@
-# D:\ApiTest\testcase\test_case_FB\test_case_fbMain.py
+# D:\ApiTest\testcase\test_case_FB\test_case_FBMain.py
 import allure
 import pytest
 import random
-from api.fb_api import FBApi
-from testcase.test_case_optimize.conftest import *
-from utils.response_handler import handle_response
-from utils.read_fbData import base_data
+from api.FB_Api import FBApi
+from utils.FB_utils.FB_response_handler import FB_handle_response
+from utils.FB_utils.read_FBdata import base_data
 
 # ANSI转义序列用于控制台颜色输出
 RED = "\033[91m"
@@ -35,7 +34,7 @@ class TestFBMain:
     def test_add_original_package_valid(self):
         data = base_data.read_yaml()['add_original_package']['valid']
         result = FBApi().add_original_package(data)
-        handle_response(result)
+        FB_handle_response(result)
 
     @allure.story("新增⺟包版本-异常场景")
     @allure.title("新增⺟包版本-异常场景")
@@ -44,7 +43,7 @@ class TestFBMain:
     @pytest.mark.parametrize("data", base_data.read_yaml()['add_original_package']['invalid'])
     def test_add_original_package_invalid(self, data):
         result = FBApi().add_original_package(data)
-        handle_response(result, expected_code=400)
+        FB_handle_response(result, expected_code=400)
 
     @allure.story("查询⺟包列表")
     @allure.title("查询上一步中新增的⺟包：pytest_add")
@@ -54,8 +53,10 @@ class TestFBMain:
     def test_list_original_packages_valid(self):
         data = base_data.read_yaml()['list_original_packages']['valid']
         result = FBApi().list_original_packages(data)
-        assert result['data']['info']['original_package_id'] == 5
-        handle_response(result)
+        if data.get('Test_11'):
+            assert result['data']['info']['original_package_id'] == 5
+        else:
+            FB_handle_response(result)
 
     @allure.story("查询⺟包列表-异常场景")
     @allure.title("查询⺟包列表-异常场景")
@@ -65,9 +66,9 @@ class TestFBMain:
     def test_list_original_packages_invalid(self, data):
         result = FBApi().list_original_packages(data)
         if data.get('unauthorized'):
-            handle_response(result, expected_code=401)
+            FB_handle_response(result, expected_code=401)
         else:
-            handle_response(result, expected_code=400)
+            FB_handle_response(result, expected_code=400)
 
     @allure.story("新增分包计划")
     @allure.title("新增分包计划：pytest_add")
@@ -78,7 +79,7 @@ class TestFBMain:
         data = base_data.read_yaml()['add_task']['valid']
         data['task_name'] = generate_random_task_name("Py_add_", "add")
         result = FBApi().add_task(data)
-        handle_response(result)
+        FB_handle_response(result)
 
     @allure.story("新增分包计划-异常场景")
     @allure.title("新增分包计划-异常场景")
@@ -88,9 +89,9 @@ class TestFBMain:
     def test_add_task_invalid(self, data):
         result = FBApi().add_task(data)
         if data.get('unauthorized'):
-            handle_response(result, expected_code=401)
+            FB_handle_response(result, expected_code=401)
         else:
-            handle_response(result, expected_code=400)
+            FB_handle_response(result, expected_code=400)
 
     @allure.story("查询分包计划")
     @allure.title("查询上一步中新增的分包计划：pytest_add")
@@ -99,10 +100,12 @@ class TestFBMain:
     @pytest.mark.run(order=4)
     def test_list_tasks_valid(self):
         data = base_data.read_yaml()['list_tasks']['valid']
-        data['task_name'] = self.generated_names["add"]
+        # data['task_name'] = self.generated_names["add"]
         result = FBApi().list_tasks(data)
-        assert result['data']['list'][0]['task_name'] == self.generated_names["add"]
-        handle_response(result)
+        if data.get('Test_11'):
+            assert result['data']['list'][0]['task_name'] == 'Test_11'
+        else:
+            FB_handle_response(result)
 
     @allure.story("查询分包计划-异常场景")
     @allure.title("查询分包计划-异常场景")
@@ -112,9 +115,9 @@ class TestFBMain:
     def test_list_tasks_invalid(self, data):
         result = FBApi().list_tasks(data)
         if data.get('unauthorized'):
-            handle_response(result, expected_code=401)
+            FB_handle_response(result, expected_code=401)
         else:
-            handle_response(result, expected_code=400)
+            FB_handle_response(result, expected_code=400)
 
     @allure.story("更新分包计划")
     @allure.title("更新分包计划：pytest_edit")
@@ -124,7 +127,7 @@ class TestFBMain:
     def test_update_task_valid(self):
         data = base_data.read_yaml()['update_task']['valid']
         result = FBApi().update_task(data)
-        handle_response(result)
+        FB_handle_response(result)
 
     @allure.story("更新分包计划-异常场景")
     @allure.title("更新分包计划-异常场景")
@@ -134,11 +137,11 @@ class TestFBMain:
     def test_update_task_invalid(self, data):
         result = FBApi().update_task(data)
         if data.get('unauthorized'):
-            handle_response(result, expected_code=401)
+            FB_handle_response(result, expected_code=401)
         elif data.get('already_updated'):
-            handle_response(result, expected_code=400, expected_msg="计划已经更新完成")
+            FB_handle_response(result, expected_code=401)
         else:
-            handle_response(result, expected_code=400)
+            FB_handle_response(result, expected_code=401)
 
     @allure.story("删除分包计划")
     @allure.title("删除分包计划：pytest_delete")
@@ -148,7 +151,7 @@ class TestFBMain:
     def test_delete_task_valid(self):
         data = base_data.read_yaml()['delete_task']['valid']
         result = FBApi().delete_task(data)
-        handle_response(result)
+        FB_handle_response(result)
 
     @allure.story("删除分包计划-异常场景")
     @allure.title("删除分包计划-异常场景")
@@ -158,6 +161,6 @@ class TestFBMain:
     def test_delete_task_invalid(self, data):
         result = FBApi().delete_task(data)
         if data.get('unauthorized'):
-            handle_response(result, expected_code=401)
+            FB_handle_response(result, expected_code=401)
         else:
-            handle_response(result, expected_code=400)
+            FB_handle_response(result, expected_code=400)

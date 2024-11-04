@@ -3,8 +3,8 @@ import os
 
 import yaml
 
-yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'oriModMain.yaml')
-ini_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'settings.ini')
+yaml_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'oriModMain.yaml')
+ini_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'config', 'settings.ini')
 
 
 class ReadOriModMain:
@@ -24,3 +24,4 @@ class ReadOriModMain:
 
 
 base_data = ReadOriModMain()
+# print(base_data.read_yaml())
