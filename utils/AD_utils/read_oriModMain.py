@@ -4,7 +4,7 @@ import os
 import yaml
 
 yaml_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'data', 'oriModMain.yaml')
-ini_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'config', 'settings.ini')
+ini_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), 'config', 'AD_settings.ini')
 
 
 class ReadOriModMain:

@@ -14,7 +14,7 @@ class OriModApi(object):
         :return: 新增结果的JSON响应
         """
         response = OriModApiUtil.add_orientationModule(json=params)
-        return response.json()
+        return response
 
     def oriMod_Search(params):
         """
@@ -23,7 +23,7 @@ class OriModApi(object):
         :return: 查询结果的JSON响应
         """
         response = OriModApiUtil.oriMod_Search(params=params)
-        return response.json()
+        return response
 
     def add_oriMod_Edit(params):
         """
@@ -32,7 +32,7 @@ class OriModApi(object):
         :return: 编辑结果的JSON响应
         """
         response = OriModApiUtil.add_oriMod_Edit(json=params)
-        return response.json()
+        return response
 
     def copy_oriMod(params):
         """
@@ -41,7 +41,7 @@ class OriModApi(object):
         :return: 查询结果的JSON响应
         """
         response = OriModApiUtil.copy_oriMod(json=params)
-        return response.json()
+        return response
 
     def del_orientationModule(params):
         """
@@ -50,7 +50,7 @@ class OriModApi(object):
         :return: 删除结果的JSON响应
         """
         response = OriModApiUtil.del_orientationModule(json=params)
-        return response.json()
+        return response
 
 
 api = OriModApi()

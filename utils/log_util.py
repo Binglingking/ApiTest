@@ -7,7 +7,7 @@ root_path = os.path.dirname(os.path.abspath(os.path.dirname(__file__)))
 log_path = os.path.join(root_path, 'log')
 
 # 打印日志路径
-print(log_path)
+# print(log_path)
 
 # 如果日志目录不存在，则创建
 if not os.path.exists(log_path):

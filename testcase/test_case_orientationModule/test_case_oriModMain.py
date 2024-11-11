@@ -2,9 +2,10 @@ import allure
 import pytest
 import random
 from api.oriMod_api import OriModApi
-from testcase.test_case_optimize.AD_conftest import *
+from testcase.test_case_optimize.AD_conftest import add_oriMod_id, edit_oriMod_id, copy_oriMod_id
 from utils.AD_utils.AD_response_handler import handle_response
 from utils.AD_utils.read_oriModMain import base_data
+from config.AD_getTokenUI import get_token_from_ui
 
 # ANSI转义序列用于控制台颜色输出
 RED = "\033[91m"
@@ -23,7 +24,7 @@ def generate_random_model_name(prefix="Py_", action=None):
 @allure.feature("定向模块主流程测试")
 @allure.description("定向模块主流程测试流程：新增-编辑-复制-删除，并在每个操作后进行查询")
 class TestAdmax_oriModMain:
-    # 定义一个字典来保存生成的模板名称
+    # 定义一部字典来保存生成的模板名称
     generated_names = {}
 
     @allure.story("定向模块新增")
@@ -32,6 +33,15 @@ class TestAdmax_oriModMain:
     @allure.severity("blocker")  # 用例等级
     @pytest.mark.run(order=1)
     def test_add_oriMod(self):
+        # 在用例执行前获取Token
+        print("开始获取Token...")
+        try:
+            get_token_from_ui()
+            print(f"Token获取成功")
+        except Exception as e:
+            print(f"Token获取失败: {e}")
+            pytest.exit("由于无法获取有效的Token，测试用例将不会执行。")
+
         data = base_data.read_yaml()['add_oriMod']
         data['model_name'] = generate_random_model_name("Py_add_", "add")
         result = OriModApi.add_orientationModule(data)
@@ -106,7 +116,6 @@ class TestAdmax_oriModMain:
     def test_del_oriMod(self):
         # 获取需要删除的模板 ID 列表
         del_ids = [edit_oriMod_id(), copy_oriMod_id()]
-
         for del_id in del_ids:
             data = base_data.read_yaml()['del_oriMod']
             data['id'] = del_id
