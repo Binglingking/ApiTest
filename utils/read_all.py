@@ -4,7 +4,7 @@ import os
 import yaml
 
 yaml_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'data.yaml')
-ini_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'settings.ini')
+ini_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'FBSettings.ini')
 
 
 class ReadData:

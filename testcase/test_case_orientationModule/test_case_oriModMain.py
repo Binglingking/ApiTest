@@ -34,13 +34,13 @@ class TestAdmax_oriModMain:
     @pytest.mark.run(order=1)
     def test_add_oriMod(self):
         # 在用例执行前获取Token
-        print("开始获取Token...")
-        try:
-            get_token_from_ui()
-            print(f"Token获取成功")
-        except Exception as e:
-            print(f"Token获取失败: {e}")
-            pytest.exit("由于无法获取有效的Token，测试用例将不会执行。")
+        # print("开始获取Token...")
+        # try:
+        #     get_token_from_ui()
+        #     print(f"Token获取成功")
+        # except Exception as e:
+        #     print(f"Token获取失败: {e}")
+        #     pytest.exit("由于无法获取有效的Token，测试用例将不会执行。")
 
         data = base_data.read_yaml()['add_oriMod']
         data['model_name'] = generate_random_model_name("Py_add_", "add")

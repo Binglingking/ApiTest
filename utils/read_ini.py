@@ -1,6 +1,6 @@
 import configparser
 import os
-path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'settings.ini')
+path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'FBSettings.ini')
 
 def read_ini():
     config = configparser.ConfigParser()

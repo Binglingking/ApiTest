@@ -50,11 +50,11 @@ class RestClient:
             raise
 
     def refresh_token(self):
-        logger.info("token已过期。正在刷新令牌...")
+        logger.info("token已过期。正在刷新token...")
         ADUI_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'config', 'AD_getTokenUI.py')
         try:
             subprocess.run(["python", ADUI_path], check=True)
-            logger.info("AD_getTokenUI.py 执行成功。")
+            logger.info("UI自动获取token脚本：AD_getTokenUI.py 执行成功。")
         except subprocess.CalledProcessError as e:
             logger.error(f"执行 AD_getTokenUI.py 时出错: {e}")
             return
@@ -103,13 +103,19 @@ class RestClient:
     def _log_response(self, response):
         logger.debug(f"返回结果: {response}")
 
-if __name__ == "__main__":
-    client = RestClient()
-    try:
-        response = client.get("/api/orientationModule/list")
-        print(response)
-    except Exception as e:
-        logger.error(f"请求失败: {e}")
+# if __name__ == "__main__":
+#     client = RestClient()
+#     try:
+#         params = {
+#             'channel_id': 'OceanEngine',
+#             'model_name': 'pytest_add'
+#         }
+#
+#         # 发送带有参数的 GET 请求
+#         response = client.get("/api/orientationModule/list", params=params)
+#         print(response)
+#     except Exception as e:
+#         logger.error(f"请求失败: {e}")
 
 # """
 #     封装了请求头，请求地址，请求参数，请求方法，响应结果等。
