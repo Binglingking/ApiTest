@@ -1,10 +1,6 @@
 import os
 
-# script_path = os.path.join(os.path.join(os.path.dirname(__file__)), 'config', "AD_getTokenUI.py")
-# # print(script_path)
-#
-# path1 = os.path.dirname(os.path.join(os.path.dirname(__file__)))
-# path2 = os.path.join(path1, 'config', "AD_getTokenUI.py")
-# print(path2)
-
-# print(script_path)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+    # 组合路径，指向配置文件 AD_settings.ini
+ini_path = os.path.join(current_dir, '..', 'config', 'AD_settings.ini')
+print(ini_path)

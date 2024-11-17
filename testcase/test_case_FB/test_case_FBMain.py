@@ -53,10 +53,7 @@ class TestFBMain:
     def test_list_original_packages_valid(self):
         data = base_data.read_yaml()['list_original_packages']['valid']
         result = FBApi().list_original_packages(data)
-        if data.get('Test_11'):
-            assert result['data']['info']['original_package_id'] == 5
-        else:
-            FB_handle_response(result)
+        assert result['data']['list'][0]['original_package_version'] == '4.0.1'
 
     @allure.story("查询⺟包列表-异常场景")
     @allure.title("查询⺟包列表-异常场景")

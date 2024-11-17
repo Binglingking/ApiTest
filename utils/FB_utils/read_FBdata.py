@@ -22,4 +22,4 @@ class ReadFBData:
         return config
 
 base_data = ReadFBData()
-print(ini_path)
+# print(ini_path)

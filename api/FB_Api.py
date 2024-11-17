@@ -1,4 +1,3 @@
-# D:\ApiTest\api\FB_Api.py
 import requests
 from core.FB_rest_client import RestClient
 

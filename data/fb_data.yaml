@@ -58,7 +58,7 @@ add_original_package:
 list_original_packages:
   # 有效的测试数据
   valid:
-    id: "1.8.2"  # 原始包ID
+    id: "4.0.1"  # 原始包ID
 
   # 无效的测试数据
   invalid:
@@ -74,7 +74,7 @@ add_task:
     task_name: "Test_55"  # 任务名称
     original_package_type: "official"  # 原始包类型
     original_package_id: 1  # 原始包ID
-    original_package_version: "1.8.1"  # 原始包版本
+    original_package_version: "4.0.1"  # 原始包版本
     ad_channel: "OceanEngine"  # 广告渠道
     package_id_suffix: ""  # 包ID后缀
     task_desc: ""  # 任务描述

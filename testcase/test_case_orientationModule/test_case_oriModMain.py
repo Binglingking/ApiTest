@@ -46,7 +46,6 @@ class TestAdmax_oriModMain:
         data['model_name'] = generate_random_model_name("Py_add_", "add")
         result = OriModApi.add_orientationModule(data)
         handle_response(result)
-
     @allure.story("定向模块查询")
     @allure.title("查询上一步中新增的模块：pytest_add")
     @allure.testcase("https://test-admax.yostar.net/api/orientationModule/list", "定向模块查询地址")
