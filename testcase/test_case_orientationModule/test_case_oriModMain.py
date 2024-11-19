@@ -1,7 +1,7 @@
 import allure
 import pytest
 import random
-from api.oriMod_api import OriModApi
+from api.oriMod_Api import OriModApi
 from testcase.test_case_optimize.AD_conftest import add_oriMod_id, edit_oriMod_id, copy_oriMod_id
 from utils.AD_utils.AD_response_handler import handle_response
 from utils.AD_utils.read_oriModMain import base_data

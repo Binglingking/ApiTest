@@ -160,8 +160,6 @@ list_tasks:
   # 有效的测试数据
   valid:
     task_name: "Test_11"  # 任务名称
-    page: 1  # 页码
-    size: 10  # 每页大小
 
   # 无效的测试数据
   invalid:
