@@ -14,7 +14,7 @@ YELLOW = "\033[93m"
 
 
 def generate_random_task_name(prefix="Py_", action=None):
-    random_number = random.randint(10, 999)  # 生成两位随机数
+    random_number = random.randint(0, 9999)  # 生成随机数
     name = f"{prefix}{random_number}"
     if action:
         TestFBCX.generated_names[action] = name
@@ -65,5 +65,14 @@ class TestFBCX:
         data = base_data.read_yaml()['delete_task']['valid']
         data['task_id']  = self.task_id
         print('task_id参数:',data)
+        result = FBApi().delete_task(data)
+        FB_handle_response(result)
+
+    @allure.story("删除分包计划-批量删除")
+    @allure.title("删除分包计划-批量删除")
+    @allure.testcase("https://test-advertising.yostar.net/admax-packerapi/packer/task/delete", "删除分包计划地址")
+    @allure.severity("critical")  # 用例等级
+    @pytest.mark.parametrize("data", base_data.read_yaml()['delete_task']['valid_list'])
+    def test_delete_task_invalid(self, data):
         result = FBApi().delete_task(data)
         FB_handle_response(result)
