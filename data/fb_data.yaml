@@ -70,14 +70,15 @@ list_original_packages:
 # 添加任务的测试数据
 add_task:
   # 有效的测试数据
-  valid:
-    task_name: "Test_55"  # 任务名称
-    original_package_type: "official"  # 原始包类型
-    original_package_id: 1  # 原始包ID
-    original_package_version: "4.0.1"  # 原始包版本
-    ad_channel: "OceanEngine"  # 广告渠道
-    package_id_suffix: ""  # 包ID后缀
-    task_desc: ""  # 任务描述
+  valid_list:
+    - task_name: "Test_55"  # 任务名称
+      original_package_type: "official"  # 原始包类型
+      original_package_id: 1  # 原始包ID
+      original_package_version: "4.0.1"  # 原始包版本
+      ad_channel: "OceanEngine"  # 广告渠道
+      package_id_suffix: ""  # 包ID后缀
+      task_desc: ""  # 任务描述
+
 
   # 无效的测试数据
   invalid:
@@ -174,19 +175,18 @@ delete_task:
     task_id: 1031  # 任务ID
 
   valid_list:
-    - task_id: 1073
-    - task_id: 1072
-    - task_id: 1071
-    - task_id: 1070
-    - task_id: 1069
-    - task_id: 1068
-    - task_id: 1067
-    - task_id: 1066
-    - task_id: 1065
-    - task_id: 1064
-    - task_id: 1063
-    - task_id: 1062
-    - task_id: 1061
+    - task_id: 1083
+    - task_id: 1082
+    - task_id: 1081
+    - task_id: 1080
+    - task_id: 1079
+    - task_id: 1078
+    - task_id: 1077
+    - task_id: 1076
+    - task_id: 1075
+    - task_id: 1074
+
+
 
   # 无效的测试数据
   invalid:
