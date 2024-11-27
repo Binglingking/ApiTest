@@ -9,21 +9,21 @@ def dl_task_id():
     """
 
     sql = """
-    SELECT task_id FROM package_task WHERE task_name LIKE   'py_add%' AND deleted_at is null; 
+    SELECT task_id FROM admax_test.package_task WHERE task_name LIKE 'py_add%' AND deleted_at is null; 
     """
 
     # 执行SQL查询
     result = db.select_db(sql)
+    print(result)
 
     # 记录查询结果
     logger.info(f'SQL执行结果: {result}')
-    print(result)
 
     # 检查查询结果是否为空
     if not result:
-        logger.warning('未找到符合条件的定向模板')
+        logger.warning('未找到符合条件的task_id')
         return None
 
     # 返回查询到的第一个记录的ID
-    return result[0]['task_id']
-
+    return result
+# dl_task_id()

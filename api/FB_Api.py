@@ -34,7 +34,7 @@ class FBApi(object):
         response = FBApiUtil.add_task(json=params)
         return response
 
-    def update_task(params):
+    def update_task(self,params):
         """
         更新任务
         :param params: 更新参数

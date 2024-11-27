@@ -52,3 +52,6 @@ if __name__ == '__main__':
     # result = db.select_db(sql)
     # # print(type(result))
     # print(result[0]['channel_id'])
+    # sql = "SELECT task_id FROM admax_test.package_task WHERE task_name LIKE 'py_add%' AND deleted_at is null"
+    # result = db.select_db(sql)
+    # print((result))

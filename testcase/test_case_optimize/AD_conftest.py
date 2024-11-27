@@ -29,7 +29,7 @@ def add_oriMod_id():
 
     # 返回查询到的第一个记录的ID
     return result[0]['id']
-
+# add_oriMod_id()
 def edit_oriMod_id():
     """
     查询并返回用例中新建的定向模板的ID
