@@ -45,7 +45,7 @@ class TestFBCX:
     @pytest.mark.parametrize("ad_channel", [
         "Weibo", "OceanEngine", "Tencent", "Taptap", "BaiduSearch", "BaiduFeed",
         "BaiduBrand", "Zhihu", "UC", "360", "Iqiyi", "Hundred", "Official",
-        "haiyoukuaibao", "mumu"
+        "haoyoukuaibao", "mumu"
     ])  # 新增所有渠道计划  # 新增所有渠道计划
     @pytest.mark.parametrize("original_package_type", ["official", "official-lite"])
     @pytest.mark.run(order=1)
@@ -76,24 +76,41 @@ class TestFBCX:
             assert result['code'] == 200, f"查询失败: {result}"
             FB_handle_response(result)
 
-    # @allure.story("更新分包计划")
-    # @allure.title("更新分包计划：pytest_edit")
-    # @allure.testcase("https://test-advertising.yostar.net/admax-packerapi/packer/task/update", "更新分包计划地址")
-    # @allure.severity("blocker")  # 用例等级
-    # @pytest.mark.run(order=5)
-    # def test_update_task_valid(self):
-    #     data = base_data.read_yaml()['update_task']['valid']
-    #     result = FBApi().update_task(data)
-    #     FB_handle_response(result)
+    @allure.story("更新分包计划")
+    @allure.title("更新分包计划：pytest_edit")
+    @allure.testcase("https://test-advertising.yostar.net/admax-packerapi/packer/task/update", "更新分包计划地址")
+    @allure.severity("blocker")  # 用例等级
+    @pytest.mark.run(order=5)
+    def test_update_task_valid(self):
+        task_id_dict = dl_task_id()
+        for task_id in task_id_dict:
+            data = base_data.read_yaml()['update_task']['valid']
+            data['task_id_list'] = [int(task_id['task_id'])]
+            result = FBApi().update_task(data)
+            FB_handle_response(result)
 
     @allure.story("删除分包计划-批量删除")
     @allure.title("删除分包计划-批量删除")
     @allure.testcase("https://test-advertising.yostar.net/admax-packerapi/packer/task/delete", "删除分包计划地址")
     @allure.severity("critical")  # 用例等级
-    @pytest.mark.parametrize("task_id_dict", dl_task_id())
     @pytest.mark.run(order=3)
-    def test_delete_task_invalid(self,task_id_dict):
-        data = base_data.read_yaml()['delete_task']['valid']
-        data['task_id'] = task_id_dict["task_id"]
-        result = FBApi().delete_task(data)
-        FB_handle_response(result)
+    def test_delete_task_invalid(self):
+        task_id_dict = dl_task_id()
+        for task_id in task_id_dict:
+            data = base_data.read_yaml()['delete_task']['valid']
+            data['task_id'] = task_id['task_id']
+            result = FBApi().delete_task(data)
+            FB_handle_response(result)
+
+    # 删除用例的备用方案
+    # @allure.story("删除分包计划-批量删除")
+    # @allure.title("删除分包计划-批量删除")
+    # @allure.testcase("https://test-advertising.yostar.net/admax-packerapi/packer/task/delete", "删除分包计划地址")
+    # @allure.severity("critical")  # 用例等级
+    # @pytest.mark.parametrize("task_id_dict", dl_task_id())
+    # @pytest.mark.run(order=3)
+    # def test_delete_task_invalid(self,task_id_dict):
+    #     data = base_data.read_yaml()['delete_task']['valid']
+    #     data['task_id'] = task_id_dict["task_id"]
+    #     result = FBApi().delete_task(data)
+    #     FB_handle_response(result)
